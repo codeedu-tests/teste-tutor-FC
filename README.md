@@ -1,4 +1,5 @@
 
+
 # Teste para Tutor
 
 ## Descrição
@@ -10,6 +11,8 @@ O projeto consiste na criação de um sistema de reserva de hotel.
 * Back-end (Pode ser usado qualquer lib ou framework);
 * Docker para orquestar o ambiente da aplicação;
 * Banco de dados MySQL;
+* Testes
+* Utilize DDD, Clean Architecture
 
 ## Contexto do sistema
 
@@ -94,6 +97,11 @@ Criar a aplicação usando testes automatizados será um grande diferencial.
 Crie as duas aplicações montando-as com Docker de forma que ao fazer `docker-compose up` seja possível testar todo o ambiente. 
 O Docker deve levantar back-end, banco de dados.
 
+## Integração continua
+Essa tarefa **é opcional, ou seja, não é essencial** porém pode ser realizada. Você deverá criar uma pipeline de integração continua: 
+- Criar um Dockerfile.prod
+- Criar rotina Github Actions
+- Rodar testes
 
 ## Vídeo-aula
 
