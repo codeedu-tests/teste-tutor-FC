@@ -60,9 +60,10 @@ Você deve criar uma API Rest que terá os seguintes endpoints:
     "status": "AVAILABLE" | "UNAVAILABLE"
 }
 ```
-* POST book/:hotel_id/:room_id - Realiza a reserva de um quarto do hotel.
+* POST book/:hotel_id - Realiza a reserva de um quarto do hotel.
 ```json
 {
+    "room_number": 101,
     "start_date": "01/01/2023",
     "end_date": "04/01/2023",
 }
