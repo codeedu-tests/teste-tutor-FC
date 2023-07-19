@@ -21,7 +21,8 @@ O projeto consiste na criação de um sistema de reserva de hotel.
 
 #### Cliente
 - Poderá reservar em uma data especifica determinado quarto em determinado hotel se ele estiver disponível.
-
+- Dois clientes não poderão reservar o mesmo quarto numa mesma data.
+  
 ## Design do sistema
 
 ### Back-end
