@@ -85,7 +85,9 @@ Você deve criar uma API Rest que terá os seguintes endpoints:
     }
 ]
 ```
-Sempre quando uma locação for realizada, deve-se registrar isto e também atualizar a contagem no hotel.
+Sempre quando uma reserva for realizada, deve-se registrar isto, atualizando a contagem de quartos disponíveis no hotel.
+
+Um quarto não poderá ser reservado durante a mesma data em um mesmo hotel.
 
 Crie dados falsos para hotel e quartos. Crie pelo menos 2 hoteis e 20 quartos já previamente cadastrados no banco de dados.
 
