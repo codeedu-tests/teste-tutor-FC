@@ -1,3 +1,4 @@
+
 # Teste para Tutor
 
 ## Descrição
@@ -10,6 +11,7 @@ O projeto consiste na criação de um sistema de reserva de hotel.
 * Docker para orquestar o ambiente da aplicação;
 * Banco de dados MySQL;
 * Testes;
+* Mensageria
 * Utilize DDD, Clean Architecture;
 
 ## Contexto do sistema
@@ -85,18 +87,23 @@ Você deve criar uma API Rest que terá os seguintes endpoints:
     }
 ]
 ```
-Sempre quando uma reserva for realizada, deve-se registrar isto, atualizando a contagem de quartos disponíveis no hotel.
 
-Um quarto não poderá ser reservado durante a mesma data em um mesmo hotel.
+### Pontos de atenção
 
-Crie dados falsos para hotel e quartos. Crie pelo menos 2 hoteis e 20 quartos já previamente cadastrados no banco de dados.
+- Um quarto não poderá ser reservado durante a mesma data em um mesmo hotel.
 
-Criar a aplicação usando testes automatizados será um grande diferencial.
+- Sempre quando uma reserva for realizada, deve-se registrar isto, atualizando a contagem de quartos disponíveis no hotel. 
+
+- Ao realizar uma reserva, utilize o RabbitMQ para registrar em uma fila e enviar uma mensagem com os dados da reserva.
+
+- Crie dados falsos para hotel e quartos. Crie pelo menos 2 hoteis e 20 quartos já previamente cadastrados no banco de dados.
+
+- Criar a aplicação usando testes automatizados será um grande diferencial.
 
 ## Docker
 
 Crie as duas aplicações montando-as com Docker de forma que ao fazer `docker-compose up` seja possível testar todo o ambiente. 
-O Docker deve levantar back-end, banco de dados.
+O Docker deve levantar back-end, banco de dados e mensageria.
 
 ## Integração continua
 Essa tarefa **é opcional, ou seja, não é essencial** porém pode ser realizada. Você deverá criar uma pipeline de integração continua: 
